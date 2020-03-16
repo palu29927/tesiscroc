@@ -364,13 +364,26 @@ components:
       x-skaffolder-name: tesiscroc_db
   x-skaffolder-page:
     - x-skaffolder-id: 5e6fda7210a37502b05b1d56
-      x-skaffolder-name: Home
-      x-skaffolder-url: /home
+      x-skaffolder-name: UserList
+      x-skaffolder-url: /users
+      x-skaffolder-template: List_Crud
+      x-skaffolder-resource: 5e6fda7210a37502b05b1d57
+      x-skaffolder-services:
+        - 5e6fda7210a37502b05b1d5d
+        - 5e6fda7210a37502b05b1d60
+        - 5e6fda7210a37502b05b1d5c
+      x-skaffolder-nesteds: 
+      x-skaffolder-links: 
+      x-skaffolder-roles: []
+    - x-skaffolder-id: 5e6fe11910a37502b05b1dc5
+      x-skaffolder-name: home
+      x-skaffolder-url: /index
       x-skaffolder-template: 
       x-skaffolder-resource: 
       x-skaffolder-services: 
       x-skaffolder-nesteds: 
-      x-skaffolder-links: 
+      x-skaffolder-links:
+        - 5e6fda7210a37502b05b1d56
       x-skaffolder-roles: []
   x-skaffolder-roles: 
     - x-skaffolder-id: 5e6fda7210a37502b05b1d59
