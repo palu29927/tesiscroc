@@ -40,10 +40,6 @@
  *		PARAMS: 
  *		
  *
- *	UserService.create
- *		PARAMS: 
- *		
- *
  */
 // END - USED SERVICES
 
