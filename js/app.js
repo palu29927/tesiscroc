@@ -53,6 +53,12 @@ var app = angular.module('tesiscroc_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
+	.when('/users/new', {
+	  templateUrl: 'html/newuser.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
 
 // END - ROUTE
 

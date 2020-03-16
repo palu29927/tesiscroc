@@ -385,6 +385,16 @@ components:
       x-skaffolder-links:
         - 5e6fda7210a37502b05b1d56
       x-skaffolder-roles: []
+    - x-skaffolder-id: 5e6fe25b10a37502b05b1dca
+      x-skaffolder-name: newuser
+      x-skaffolder-url: /users/new
+      x-skaffolder-template: 
+      x-skaffolder-resource: 
+      x-skaffolder-services:
+        - 5e6fda7210a37502b05b1d5c
+      x-skaffolder-nesteds: 
+      x-skaffolder-links: 
+      x-skaffolder-roles: []
   x-skaffolder-roles: 
     - x-skaffolder-id: 5e6fda7210a37502b05b1d59
       x-skaffolder-name: ADMIN
