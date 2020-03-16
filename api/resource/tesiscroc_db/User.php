@@ -62,14 +62,6 @@
 		
 		//RELAZIONI ESTERNE
 		
-		gioca: {
-			type: Schema.ObjectId,
-			ref : "coppia"
-		},
-		giocano: {
-			type: Schema.ObjectId,
-			ref : "coppia"
-		},
 		
 	}
  * 
@@ -92,12 +84,10 @@ $app->post('/user',	function () use ($app){
 		'nome'	=> $body->nome,
 		'password'	=> $body->password,
 		'username'	=> $body->username,
-		
-
-	);
+			);
 
 	$obj = makeQuery("INSERT INTO user (_id, cognome, mail, nome, password, username )  VALUES ( null, :cognome, :mail, :nome, :password, :username   )", $params, false);
-        
+
 	
 	echo json_encode($body);
 	
@@ -150,12 +140,10 @@ $app->post('/user/:id',	function ($id) use ($app){
 		'mail'	    => $body->mail,
 		'nome'	    => $body->nome,
 		'password'	    => $body->password,
-		'username'	    => $body->username
-
-	);
+		'username'	    => $body->username	);
 
 	$obj = makeQuery("UPDATE user SET  cognome = :cognome,  mail = :mail,  nome = :nome,  password = :password,  username = :username   WHERE _id = :id LIMIT 1", $params, false);
-        
+
 	
 	echo json_encode($body);
     	

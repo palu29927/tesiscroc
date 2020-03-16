@@ -42,24 +42,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 INSERT INTO `tesiscroc_db`.`roles` (`role`, `_user`, `_id`) VALUES ('ADMIN', '1', 1);
 
 
---
--- Struttura della tabella `coppia`
---
-
-CREATE TABLE IF NOT EXISTS `coppia` (
-	
-	`_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT 
-
-);
 
 
-
-
-
--- relation 1:m gioca coppia - User
-ALTER TABLE `coppia` ADD COLUMN `gioca` int(11)  REFERENCES user(_id);
-
--- relation 1:m giocano coppia - User
-ALTER TABLE `coppia` ADD COLUMN `giocano` int(11)  REFERENCES user(_id);
 
 

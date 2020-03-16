@@ -45,23 +45,12 @@
  *					ObjectId id - Id resource
  *		
  *
- *	coppiaService.findBygioca
- *		PARAMS: 
- *					Objectid key - Id of model to search for
- *		
- *
- *	coppiaService.findBygiocano
- *		PARAMS: 
- *					Objectid key - Id of model to search for
- *		
- *
  */
 // END - USED SERVICES
 
 // START - REQUIRED RESOURCES
 /*
  * UserService  
- * coppiaService  
  */
 // END - REQUIRED RESOURCES
 
