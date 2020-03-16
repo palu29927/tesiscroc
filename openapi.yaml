@@ -364,6 +364,17 @@ components:
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
+    - x-skaffolder-id: 5e6fe5e610a37502b05b1de2
+      x-skaffolder-name: home
+      x-skaffolder-url: /home
+      x-skaffolder-template: 
+      x-skaffolder-resource: 
+      x-skaffolder-services: 
+      x-skaffolder-nesteds: 
+      x-skaffolder-links:
+        - 5e6fe11910a37502b05b1dc5
+        - 5e6fe53c10a37502b05b1ddc
+      x-skaffolder-roles: []
   x-skaffolder-roles: 
     - x-skaffolder-id: 5e6fda7210a37502b05b1d59
       x-skaffolder-name: ADMIN
