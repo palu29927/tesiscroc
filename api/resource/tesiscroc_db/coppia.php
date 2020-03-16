@@ -59,6 +59,63 @@
 //CRUD METHODS
 
 
+//CRUD - CREATE
+
+
+$app->post('/coppia',	function () use ($app){
+
+	$body = json_decode($app->request()->getBody());
+	
+	$params = array (
+		
+		'gioca' => isset($body->gioca)?$body->gioca:'',
+
+		'giocano' => isset($body->giocano)?$body->giocano:'',
+	);
+
+	$obj = makeQuery("INSERT INTO coppia (_id , gioca , giocano )  VALUES ( null , :gioca , :giocano   )", $params, false);
+        
+	
+	echo json_encode($body);
+	
+});
+	
+//CRUD - GET ONE
+	
+$app->get('/coppia/:id',	function ($id) use ($app){
+	$params = array (
+		'id'	=> $id,
+	);
+	
+	$obj = makeQuery("SELECT * FROM coppia WHERE _id = :id LIMIT 1", $params, false);
+	
+	
+	
+	echo json_encode($obj);
+	
+});
+	
+
+//CRUD - EDIT
+
+$app->post('/coppia/:id',	function ($id) use ($app){
+
+	$body = json_decode($app->request()->getBody());
+	
+	$params = array (
+		'id'	=> $id,
+		'gioca'      => isset($body->gioca)?$body->gioca:'' 
+,
+		'giocano'      => isset($body->giocano)?$body->giocano:'' 
+	);
+
+	$obj = makeQuery("UPDATE coppia SET  , gioca=:gioca , giocano=:giocano  WHERE _id = :id LIMIT 1", $params, false);
+        
+	
+	echo json_encode($body);
+    	
+});
+
 
 /*
  * CUSTOM SERVICES

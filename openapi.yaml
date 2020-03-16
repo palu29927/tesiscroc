@@ -285,6 +285,103 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/User"
+  /coppia:
+    post:
+      x-skaffolder-id: 5e6fe34910a37502b05b1dcc
+      x-skaffolder-name: create
+      x-skaffolder-id-resource: 5e6fdd3a10a37502b05b1dbd
+      x-skaffolder-resource: coppia
+      x-skaffolder-crudAction: create
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION create
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /
+      x-skaffolder-roles: []
+      summary: CRUD ACTION create
+      tags:
+        - coppia
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/coppia"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+  "/coppia/{id}":
+    get:
+      x-skaffolder-id: 5e6fe34910a37502b05b1dcd
+      x-skaffolder-name: get
+      x-skaffolder-id-resource: 5e6fdd3a10a37502b05b1dbd
+      x-skaffolder-resource: coppia
+      x-skaffolder-crudAction: get
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION get
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /{id}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION get
+      tags:
+        - coppia
+      parameters:
+        - name: id
+          x-skaffolder-type: ObjectId
+          in: path
+          description: Id resource
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/coppia"
+    post:
+      x-skaffolder-id: 5e6fe34910a37502b05b1dce
+      x-skaffolder-name: update
+      x-skaffolder-id-resource: 5e6fdd3a10a37502b05b1dbd
+      x-skaffolder-resource: coppia
+      x-skaffolder-crudAction: update
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION update
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /{id}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION update
+      tags:
+        - coppia
+      parameters:
+        - name: id
+          x-skaffolder-type: ObjectId
+          in: path
+          description: Id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/coppia"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/coppia"
 security:
   - bearerAuth: []
 components:
@@ -375,6 +472,20 @@ components:
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
+    - x-skaffolder-id: 5e6fe25b10a37502b05b1dca
+      x-skaffolder-name: coppiaEdit
+      x-skaffolder-url: /coppias/{id}
+      x-skaffolder-template: Edit_Crud
+      x-skaffolder-resource: 5e6fda7210a37502b05b1d57
+      x-skaffolder-services:
+        - 5e6fda7210a37502b05b1d5c
+        - 5e6fda7210a37502b05b1d60
+        - 5e6fe34910a37502b05b1dcc
+        - 5e6fe34910a37502b05b1dcd
+        - 5e6fe34910a37502b05b1dce
+      x-skaffolder-nesteds: 
+      x-skaffolder-links: 
+      x-skaffolder-roles: []
     - x-skaffolder-id: 5e6fe11910a37502b05b1dc5
       x-skaffolder-name: home
       x-skaffolder-url: /index
@@ -384,16 +495,6 @@ components:
       x-skaffolder-nesteds: 
       x-skaffolder-links:
         - 5e6fda7210a37502b05b1d56
-      x-skaffolder-roles: []
-    - x-skaffolder-id: 5e6fe25b10a37502b05b1dca
-      x-skaffolder-name: newuser
-      x-skaffolder-url: /users/new
-      x-skaffolder-template: 
-      x-skaffolder-resource: 
-      x-skaffolder-services:
-        - 5e6fda7210a37502b05b1d5c
-      x-skaffolder-nesteds: 
-      x-skaffolder-links: 
       x-skaffolder-roles: []
   x-skaffolder-roles: 
     - x-skaffolder-id: 5e6fda7210a37502b05b1d59

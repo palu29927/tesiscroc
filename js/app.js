@@ -47,14 +47,14 @@ var app = angular.module('tesiscroc_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/index', {
-	  templateUrl: 'html/home.html',
+	.when('/coppias/:id', {
+	  templateUrl: 'html/coppiaEdit.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/users/new', {
-	  templateUrl: 'html/newuser.html',
+	.when('/index', {
+	  templateUrl: 'html/home.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
