@@ -474,7 +474,7 @@ components:
       x-skaffolder-roles: []
     - x-skaffolder-id: 5e6fe25b10a37502b05b1dca
       x-skaffolder-name: coppiaEdit
-      x-skaffolder-url: /coppias/{id}
+      x-skaffolder-url: /users/{id}
       x-skaffolder-template: Edit_Crud
       x-skaffolder-resource: 5e6fda7210a37502b05b1d57
       x-skaffolder-services:
