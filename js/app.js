@@ -47,18 +47,6 @@ var app = angular.module('tesiscroc_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/home', {
-	  templateUrl: 'html/home.html',
-	  resolve: {
-		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
-	  },
-	})
-	.when('/users', {
-	  templateUrl: 'html/users.html',
-	  resolve: {
-		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
-	  },
-	})
 	.when('/utentis/:id', {
 	  templateUrl: 'html/utentiEdit.html',
 	  resolve: {

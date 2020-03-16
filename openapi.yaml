@@ -542,24 +542,6 @@ components:
       x-skaffolder-links:
         - 5e6feb6310a37502b05b1e09
       x-skaffolder-roles: []
-    - x-skaffolder-id: 5e6feabd10a37502b05b1df3
-      x-skaffolder-name: home
-      x-skaffolder-url: /home
-      x-skaffolder-template: 
-      x-skaffolder-resource: 
-      x-skaffolder-services: 
-      x-skaffolder-nesteds: 
-      x-skaffolder-links: 
-      x-skaffolder-roles: []
-    - x-skaffolder-id: 5e6feb1910a37502b05b1dfe
-      x-skaffolder-name: users
-      x-skaffolder-url: /users
-      x-skaffolder-template: 
-      x-skaffolder-resource: 
-      x-skaffolder-services: 
-      x-skaffolder-nesteds: 
-      x-skaffolder-links: 
-      x-skaffolder-roles: []
     - x-skaffolder-id: 5e6feb6310a37502b05b1e08
       x-skaffolder-name: utentiEdit
       x-skaffolder-url: /utentis/{id}
