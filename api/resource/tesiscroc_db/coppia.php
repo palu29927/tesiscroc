@@ -79,6 +79,28 @@ $app->post('/coppia',	function () use ($app){
 	echo json_encode($body);
 	
 });
+
+//CRUD - FIND BY gioca
+
+$app->get('/coppia/findBygioca/:key',	function ($key) use ($app){	
+
+	$params = array (
+		'key'	=> $key,
+	);
+	makeQuery("SELECT * FROM coppia WHERE gioca = :key", $params);
+	
+});
+
+//CRUD - FIND BY giocano
+
+$app->get('/coppia/findBygiocano/:key',	function ($key) use ($app){	
+
+	$params = array (
+		'key'	=> $key,
+	);
+	makeQuery("SELECT * FROM coppia WHERE giocano = :key", $params);
+	
+});
 	
 //CRUD - GET ONE
 	

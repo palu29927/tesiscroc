@@ -315,6 +315,72 @@ paths:
             schema:
               type: object
               properties:
+  "/coppia/findBygioca/{key}":
+    get:
+      x-skaffolder-id: 5e6fe41b10a37502b05b1dd4
+      x-skaffolder-name: findBygioca
+      x-skaffolder-id-resource: 5e6fdd3a10a37502b05b1dbd
+      x-skaffolder-resource: coppia
+      x-skaffolder-crudAction: findBygioca
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION findBygioca
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /findBygioca/{key}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION findBygioca
+      tags:
+        - coppia
+      parameters:
+        - name: key
+          x-skaffolder-type: Objectid
+          in: path
+          description: Id of model to search for
+          required: true
+          schema:
+            type: Objectid
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/coppia"
+  "/coppia/findBygiocano/{key}":
+    get:
+      x-skaffolder-id: 5e6fe41b10a37502b05b1dd6
+      x-skaffolder-name: findBygiocano
+      x-skaffolder-id-resource: 5e6fdd3a10a37502b05b1dbd
+      x-skaffolder-resource: coppia
+      x-skaffolder-crudAction: findBygiocano
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION findBygiocano
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /findBygiocano/{key}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION findBygiocano
+      tags:
+        - coppia
+      parameters:
+        - name: key
+          x-skaffolder-type: Objectid
+          in: path
+          description: Id of model to search for
+          required: true
+          schema:
+            type: Objectid
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/coppia"
   "/coppia/{id}":
     get:
       x-skaffolder-id: 5e6fe34910a37502b05b1dcd
@@ -460,6 +526,20 @@ components:
     - x-skaffolder-id: 5e6fda7210a37502b05b1d4e
       x-skaffolder-name: tesiscroc_db
   x-skaffolder-page:
+    - x-skaffolder-id: 5e6fe42410a37502b05b1dd8
+      x-skaffolder-name: UserEdit
+      x-skaffolder-url: /users/{id}
+      x-skaffolder-template: Edit_Crud
+      x-skaffolder-resource: 5e6fda7210a37502b05b1d57
+      x-skaffolder-services:
+        - 5e6fda7210a37502b05b1d5a
+        - 5e6fda7210a37502b05b1d5c
+        - 5e6fda7210a37502b05b1d61
+        - 5e6fe41b10a37502b05b1dd4
+        - 5e6fe41b10a37502b05b1dd6
+      x-skaffolder-nesteds: 
+      x-skaffolder-links: 
+      x-skaffolder-roles: []
     - x-skaffolder-id: 5e6fda7210a37502b05b1d56
       x-skaffolder-name: UserList
       x-skaffolder-url: /users
@@ -469,20 +549,6 @@ components:
         - 5e6fda7210a37502b05b1d5d
         - 5e6fda7210a37502b05b1d60
         - 5e6fda7210a37502b05b1d5c
-      x-skaffolder-nesteds: 
-      x-skaffolder-links: 
-      x-skaffolder-roles: []
-    - x-skaffolder-id: 5e6fe25b10a37502b05b1dca
-      x-skaffolder-name: coppiaEdit
-      x-skaffolder-url: /users/{id}
-      x-skaffolder-template: Edit_Crud
-      x-skaffolder-resource: 5e6fda7210a37502b05b1d57
-      x-skaffolder-services:
-        - 5e6fda7210a37502b05b1d5c
-        - 5e6fda7210a37502b05b1d60
-        - 5e6fe34910a37502b05b1dcc
-        - 5e6fe34910a37502b05b1dcd
-        - 5e6fe34910a37502b05b1dce
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []

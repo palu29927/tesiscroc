@@ -41,14 +41,14 @@ var app = angular.module('tesiscroc_App', [
 //DO NOT EDIT THIS ROUTES, USE NEXT COMMENT SECTION
 
 // START - ROUTE
-	.when('/users', {
-	  templateUrl: 'html/UserList.html',
+	.when('/users/:id', {
+	  templateUrl: 'html/UserEdit.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/users/:id', {
-	  templateUrl: 'html/coppiaEdit.html',
+	.when('/users', {
+	  templateUrl: 'html/UserList.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },

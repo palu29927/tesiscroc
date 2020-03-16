@@ -51,5 +51,23 @@
 app.factory('coppiaService', ['$resource', '$rootScope', 'coppiaServiceCustom',
   function($resource, $rootScope, coppiaServiceCustom){
     return $resource( $rootScope.baseUrl + "/coppia/:_id", {_id:'@_id'}, $.extend({
+        'findBygioca': { 
+        	url: $rootScope.baseUrl + '/coppia/findBygioca/:key',
+        	method: 'GET',
+        	isArray: true,
+        	params: {
+        		key: '@key',
+        		 
+        	}
+        },
+        'findBygiocano': { 
+        	url: $rootScope.baseUrl + '/coppia/findBygiocano/:key',
+        	method: 'GET',
+        	isArray: true,
+        	params: {
+        		key: '@key',
+        		 
+        	}
+        },
     }, coppiaServiceCustom));
 }]);
