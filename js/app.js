@@ -41,20 +41,11 @@ var app = angular.module('tesiscroc_App', [
 //DO NOT EDIT THIS ROUTES, USE NEXT COMMENT SECTION
 
 // START - ROUTE
-	.when('/users/:id', {
-	  templateUrl: 'html/UserEdit.html',
+	.when('/home', {
+	  templateUrl: 'html/Home.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
-	})
-	.when('/users', {
-	  templateUrl: 'html/UserList.html',
-	  resolve: {
-		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
-	  },
-	})
-	.when('/public/users', {
-	  templateUrl: 'html/UserListPublic.html',
 	})
 	.when('/home', {
 	  templateUrl: 'html/home.html',
@@ -62,8 +53,23 @@ var app = angular.module('tesiscroc_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/public/register', {
-	  templateUrl: 'html/register.html',
+	.when('/users', {
+	  templateUrl: 'html/users.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
+	.when('/utentis/:id', {
+	  templateUrl: 'html/utentiEdit.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
+	.when('/utentis', {
+	  templateUrl: 'html/utentiList.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
 	})
 
 // END - ROUTE

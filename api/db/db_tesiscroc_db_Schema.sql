@@ -42,6 +42,20 @@ CREATE TABLE IF NOT EXISTS `roles` (
 INSERT INTO `tesiscroc_db`.`roles` (`role`, `_user`, `_id`) VALUES ('ADMIN', '1', 1);
 
 
+--
+-- Struttura della tabella `utenti`
+--
+
+CREATE TABLE IF NOT EXISTS `utenti` (
+	`email` varchar(130)  NOT NULL,
+	`name` varchar(130)  NOT NULL,
+	`surname` varchar(130)  NOT NULL,
+	
+	`_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT 
+
+);
+
+
 
 
 
